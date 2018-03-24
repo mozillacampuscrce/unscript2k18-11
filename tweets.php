@@ -31,6 +31,10 @@ if(isset($_POST['usermention'])){
 			}
 
 		}
+		echo $f;
+		echo "<br>";
+		echo $r;
+
 		$post =  json_encode($post);
 		$url = "http://ec2-13-126-228-105.ap-south-1.compute.amazonaws.com:8000/batch";
 		$ch = curl_init( $url );
