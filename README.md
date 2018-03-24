@@ -4,3 +4,5 @@ The user can do different tasks like :
   - Sentiments Analysis
   - Favourites Count
   - Retweets Count
+ 
+## Sentiment Analysis API
