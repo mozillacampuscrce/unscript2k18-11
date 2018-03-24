@@ -22,6 +22,8 @@ if(isset($_POST['usermention'])){
 
 				if($t['text']!=null)
 				array_push($post->strings, $t['text']);
+				$f = $f + $t['favourite_count'];
+				$r = $r + $t['retweet_count'];
 
 			
 			}
