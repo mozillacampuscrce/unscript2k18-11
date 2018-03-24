@@ -16,6 +16,8 @@ Search : <input name = "usermention" ></input>
 if(isset($_POST['usermention'])){
 	$tweets = $twitter->get('https://api.twitter.com/1.1/search/tweets.json?q='.$_POST['usermention'].'&result_type=recent&count=100');
 	$post->strings = array();
+	$f = 0;
+	$r = 0;
 		foreach($tweets as $tweet){
 			//print_r($tweet);
 			foreach($tweet as $t){
