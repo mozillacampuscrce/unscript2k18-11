@@ -9,3 +9,7 @@ The user can do different tasks like :
 Developed using Node.js and Express.js<br>
 Its is using AFINN List
 Score = sum of each token / number of tokens
+ 
+#### Installation
+  - Install nodejs<br>
+  `$curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -`<br>
