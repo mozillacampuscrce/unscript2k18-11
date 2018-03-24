@@ -25,6 +25,6 @@ The Server will start on Port 8000
 #### JSON Format for API to Analyzer<br>
 `{
 		"strings": ["this is not good", "this is good"]
-}`
+}`<br>
 
-
+Make the Post Request on URL : 8000
