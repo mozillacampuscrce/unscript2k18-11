@@ -21,3 +21,8 @@ Score = sum of each token / number of tokens
   - Start server.js<br>
   `$node server.js`<br>
 The Server will start on Port 8000
+
+## JSON Format for API to Analyzer
+```{
+		"strings": ["this is not good", "this is good"]
+}```
