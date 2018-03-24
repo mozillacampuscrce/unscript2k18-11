@@ -21,14 +21,11 @@ if(isset($_POST['usermention'])){
 		foreach($tweets as $tweet){
 			//print_r($tweet);
 			foreach($tweet as $t){
-
 				if($t['text']!=null)
-				array_push($post->strings, $t['text']);
-				$f = $f + $t['favourite_count'];
-				$r = $r + $t['retweet_count'];
-
-			
-			}
+					array_push($post->strings, $t['text']);
+					$f = $f + $t['favourite_count'];
+					$r = $r + $t['retweet_count'];
+				}
 
 		}
 		echo $f;
