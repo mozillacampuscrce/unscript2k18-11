@@ -11,6 +11,7 @@ app.use((req, res, next) => {
 })
 
 app.post('/batch', (req, res, next) => {
+    JSON.stringify(req.body).replace(/null/i, "\"\"")
     var strings = req.body.strings
     var p = 0 , ng = 0 , nt = 0;
     for(var i = 0 ; i < strings.length ; i++) {
@@ -29,6 +30,7 @@ app.post('/batch', (req, res, next) => {
 })
 
 app.post('/single', (req, res, next) => {
+    JSON.stringify(req.body).replace(/null/i, "\"\"")
     let score = sent(req.body.string)
     score = score['score']
     if(score > 0) {
