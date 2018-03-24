@@ -1,0 +1,15 @@
+CREATE TABLE `hackathon`.`user` ( `username` VARCHAR(30) NOT NULL , `password` TEXT NOT NULL , `name` VARCHAR(30) NOT NULL , `email_id` TEXT NOT NULL , `twitter_id` VARCHAR(30) NOT NULL , PRIMARY KEY (`username`(30))) ENGINE = InnoDB;
+
+
+
+CREATE TABLE `hackathon`.`twitter` ( `username` VARCHAR(30) NOT NULL , `name` VARCHAR(30) NOT NULL , `location` TEXT NOT NULL , `create_date` DATE NOT NULL , `url` TEXT NOT NULL , `language` VARCHAR(30) NOT NULL , `verified` BOOLEAN NOT NULL , `tweet_date` DATE NOT NULL , `tweet_count` INT NOT NULL , INDEX `username` (`username`(30))) ENGINE = InnoDB;
+
+
+ALTER TABLE `twitter` ADD CONSTRAINT `username` FOREIGN KEY (`username`) REFERENCES `user`(`username`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+ALTER TABLE `user` ADD `facebook_id` VARCHAR NOT NULL AFTER `twitter_id`;
+
+
+
+CREATE TABLE `hackathon`.`facebook` ( `username` VARCHAR(30) NOT NULL , `name` VARCHAR(30) NOT NULL , `comment` TEXT NOT NULL , `like` INT NOT NULL , `friends_list` BIGINT NOT NULL , INDEX `username` (`username`(30))) ENGINE = InnoDB;
