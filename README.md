@@ -19,5 +19,5 @@ Score = sum of each token / number of tokens
   - Install Dependencies<br>
     `$npm install`
   - Start server.js<br>
-  `$node server.js`
+  `$node server.js`<br>
 The Server will start on Port 8000
