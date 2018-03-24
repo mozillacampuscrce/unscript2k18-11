@@ -6,5 +6,5 @@ The user can do different tasks like :
   - Retweets Count
  
 ## Sentiment Analysis API
-Developed using Node.js and Express.js
-Its is using AFINN 
+Developed using Node.js and Express.js<br>
+Its is using AFINN List
