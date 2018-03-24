@@ -7,3 +7,4 @@ The user can do different tasks like :
  
 ## Sentiment Analysis API
 Developed using Node.js and Express.js
+Its is using AFINN 
