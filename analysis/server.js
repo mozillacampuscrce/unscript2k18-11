@@ -5,6 +5,10 @@ const parser = require('body-parser')
 
 app.use(parser.json())
 
+app.use((req, res, next) => {
+    console.log("Request from Remote")
+})
+
 app.post('/batch', (req, res, next) => {
     var strings = req.body.strings
     var p = 0 , ng = 0 , nt = 0;
