@@ -5,5 +5,5 @@ if(isset($_POST['submit'])){
 	$password = $_POST['pwd'];
 	$username = mysqli_real_escape_string($conn,$username);
 	$password = mysqli_real_escape_string($conn,$password);
-	.
+	
 ?>
