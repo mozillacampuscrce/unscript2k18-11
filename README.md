@@ -14,5 +14,10 @@ Score = sum of each token / number of tokens
   - Install nodejs<br>
   `$curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -`<br>
   `$sudo apt-get install -y nodejs`<br>
+  - open /analysis
+   `$cd analysis`
   - Install Dependencies<br>
     `$npm install`
+  - Start server.js<br>
+  `$node server.js`<br>
+The Server will start on Port 8000
