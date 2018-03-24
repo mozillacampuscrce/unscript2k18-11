@@ -7,6 +7,7 @@ app.use(parser.json())
 
 app.use((req, res, next) => {
     console.log("Request from Remote")
+    next()
 })
 
 app.post('/batch', (req, res, next) => {
