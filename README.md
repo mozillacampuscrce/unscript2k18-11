@@ -8,4 +8,4 @@ The user can do different tasks like :
 ## Sentiment Analysis API
 Developed using Node.js and Express.js<br>
 Its is using AFINN List
-Score = sum of each token
+Score = sum of each token / number of tokens
