@@ -1,9 +1,9 @@
 <?php 
 include("twitter/twitteroauth.php");
-$consumer = "SbphYDy0W1ZKjcauZhT1fcuL9";
-$consumertoken = "rjd7MhWAmQbRB7cwSvDL46MrE8oGS4szWGUowVbJiYm8KnJcbp";
-$tokens = "584645402-ea5lAbHopMZDh3lxicxsU8Mi9rqxrwcFgGP7hsIg";
-$tokensecret = "goSu5xzAjguw33W1txTRkTdQynI9BbqOkJyP5kkCgYYfd";
+$consumer = "";
+$consumertoken = "";
+$tokens = "";
+$tokensecret = "";
 $twitter = new TwitterOAuth($consumer,$consumertoken,$tokens,$tokensecret);
 ?>
 <html>
@@ -18,15 +18,28 @@ if(isset($_POST['usermention'])){
 		foreach($tweets as $tweet){
 			//print_r($tweet);
 			foreach($tweet as $t){
-				
+
+				if($t['text']!=null)
 				array_push($post->strings, $t['text']);
 
 			
 			}
 
 		}
-		echo json_encode($post);
-		
+		$post =  json_encode($post);
+		$url = "http://ec2-13-126-228-105.ap-south-1.compute.amazonaws.com:8000/batch";
+		$ch = curl_init( $url );
+	
+	curl_setopt( $ch, CURLOPT_POSTFIELDS, $post );
+	curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+	# Return response instead of printing.
+	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+	# Send request.
+	$result = curl_exec($ch);
+	curl_close($ch);
+	# Print response.
+	echo "<pre>$result</pre>";
+
 }
 ?>
 </body>
