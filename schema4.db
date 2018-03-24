@@ -17,4 +17,4 @@ ALTER TABLE `user` ADD `facebook_id` VARCHAR NOT NULL AFTER `twitter_id`;
 CREATE TABLE `hackathon`.`facebook` ( `username` VARCHAR(30) NOT NULL , `name` VARCHAR(30) NOT NULL , `comment` TEXT NOT NULL , `like` INT NOT NULL , `friends_list` BIGINT NOT NULL , INDEX `username` (`username`(30))) ENGINE = InnoDB;
 
 
-ALTER TABLE `facebook` ADD `close_frnd` INT NOT NULL AFTER `like`
+ALTER TABLE `facebook` ADD `close_frnd` INT NOT NULL AFTER `like`;
