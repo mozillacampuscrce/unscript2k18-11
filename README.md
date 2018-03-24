@@ -14,6 +14,6 @@ Score = sum of each token / number of tokens
   - Install nodejs<br>
   `$curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -`<br>
   `$sudo apt-get install -y nodejs`<br>
-  - Install Dependencies
-    Express
-    body-parser
+  - Install Dependencies<br>
+    Express<br>
+    body-parser<br>
