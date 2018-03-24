@@ -29,4 +29,5 @@ app.use((req, res, next) => {
 
 const server = app.listen(8000, (error) => {
     if(error) throw error
+    console.log('Server Started on Port 8000')
 })
