@@ -12,3 +12,4 @@ Score = sum of each token / number of tokens
  
 #### Installation
   - Install nodejs
+  `$curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -`
