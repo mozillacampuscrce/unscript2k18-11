@@ -6,3 +6,4 @@ The user can do different tasks like :
   - Retweets Count
  
 ## Sentiment Analysis API
+Developed using Node.js and Express.js
