@@ -6,4 +6,6 @@ The user can do different tasks like :
   - Retweets Count
  
 ## Sentiment Analysis API
-Developed using Node.js and Express.js
+Developed using Node.js and Express.js<br>
+Its is using AFINN List
+Score = sum of each token / number of tokens
