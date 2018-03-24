@@ -18,5 +18,6 @@ Score = sum of each token / number of tokens
    `$cd analysis`
   - Install Dependencies<br>
     `$npm install`
-  - Start server.js
+  - Start server.js<br>
   `$node server.js`
+The Server will start on Port 8000
