@@ -23,6 +23,10 @@ app.post('/', (req, res, next) => {
     }
 })
 
+app.use((req, res, next) => {
+    res.send(404)
+})
+
 const server = app.listen(8000, (error) => {
     if(error) throw error
 })
