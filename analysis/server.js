@@ -5,6 +5,24 @@ const parser = require('body-parser')
 
 app.use(parser.json())
 
+app.post('/batch', (req, res, next) => {
+    var strings = req.body.strings
+    var p = 0 , ng = 0 , nt = 0;
+    for(var i = 0 ; i < strings.length ; i++) {
+        let score = sent(strings[i])
+        score = score['score']
+        if(score > 0) p++
+        else if(score < 0) ng++
+        else nt++
+    }
+    res.send({
+        "positive" : p,
+        "neutral" : nt,
+        "negative" : ng,
+        "total": strings.length
+    })
+})
+
 app.post('/single', (req, res, next) => {
     let score = sent(req.body.string)
     score = score['score']
