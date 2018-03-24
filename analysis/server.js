@@ -5,7 +5,7 @@ const parser = require('body-parser')
 
 app.use(parser.json())
 
-app.post('/', (req, res, next) => {
+app.post('/single', (req, res, next) => {
     let score = sent(req.body.string)
     score = score['score']
     if(score > 0) {
