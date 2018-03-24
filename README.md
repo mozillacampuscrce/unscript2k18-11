@@ -18,4 +18,5 @@ Score = sum of each token / number of tokens
    `$cd analysis`
   - Install Dependencies<br>
     `$npm install`
-  -
+  - Start server.js
+  `$node server.js`
